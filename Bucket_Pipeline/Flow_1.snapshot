@@ -38,6 +38,36 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "466f5978-02bb-31b3-8670-dddec37ef81a",
+            "id" : "9f72b86a-b120-3381-9ce2-749412608eb6",
+            "name" : "PublishKafka_2_6",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "466f5978-02bb-31b3-8670-dddec37ef81a",
+          "identifier" : "3b7239a9-6104-3259-bd67-21586067a812",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "valid", "invalid" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "466f5978-02bb-31b3-8670-dddec37ef81a",
+            "id" : "c4a7137d-d7df-3023-b882-aa4bf13d5c04",
+            "name" : "ValidateCsv",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
         } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -73,8 +103,8 @@
           "name" : "GetFile",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 2344.0,
-            "y" : 752.0
+            "x" : 2208.0,
+            "y" : 768.0
           },
           "properties" : {
             "Keep Source File" : "true",
@@ -169,7 +199,7 @@
           "type" : "org.apache.nifi.processors.standard.GetFile",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "valid", "invalid" ],
+          "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
@@ -185,8 +215,8 @@
           "name" : "ValidateCsv",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 2880.0,
-            "y" : 760.0
+            "x" : 2792.0,
+            "y" : 768.0
           },
           "properties" : {
             "validate-csv-schema" : "ParseDouble,ParseChar,ParseDouble,ParseChar,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseDouble,ParseChar,ParseChar,ParseChar",
@@ -242,7 +272,7 @@
           "type" : "org.apache.nifi.processors.standard.ValidateCsv",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ ],
+          "autoTerminatedRelationships" : [ "success", "failure" ],
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-kafka-2-6-nar",
@@ -258,8 +288,8 @@
           "name" : "PublishKafka_2_6",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 3416.0,
-            "y" : 760.0
+            "x" : 3328.0,
+            "y" : 768.0
           },
           "properties" : {
             "compression.type" : "none",
@@ -269,12 +299,13 @@
             "message-header-encoding" : "UTF-8",
             "ack.wait.time" : "5 secs",
             "use-transactions" : "true",
-            "acks" : "0",
+            "acks" : "all",
             "security.protocol" : "PLAINTEXT",
             "max.request.size" : "1 MB",
             "sasl.token.auth" : "false",
             "Failure Strategy" : "Route to Failure",
             "partitioner.class" : "org.apache.kafka.clients.producer.internals.DefaultPartitioner",
+            "topic" : "Elections",
             "key-attribute-encoding" : "utf-8"
           },
           "propertyDescriptors" : {
