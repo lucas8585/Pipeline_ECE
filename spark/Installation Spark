@@ -18,7 +18,7 @@ Vérifier si spark fonctionne avec la commande suivante pour lancer spark-shell
 
 ./spark/bin/spark-shell
 
-
+![sparkshell](https://user-images.githubusercontent.com/94440244/146572102-bcbcecb9-eb72-4a92-a7bb-ab650ff8eb82.png)
 
 Vérifier si spark fonctionne avec la commande suivante pour lancer pyspark
 
