@@ -15,16 +15,21 @@ Pour cela, on a lancé nifi et nifi registry avec les commandes suivantes :
 Après avoir démarré nifi et nifi registry on devait créer un bucket avec nifi registry et connecter nifi grâce au registryclient (ici en l'occurence on est sur le port par défaut de nifi registry localhost:18080).
 
 ![bucket](https://user-images.githubusercontent.com/94440244/146553199-5dac1549-056c-4d71-81e3-1567bee64925.png)
+
+
+
+
+
 ![registryclient](https://user-images.githubusercontent.com/94440244/146553167-2d66f29a-77ec-4272-ac62-463b2bf445f1.png)
 
-A la suite de cela, on devait versionner le flux nifi sur github, pour se faire on a créer le repo et recuperer le token. 
+A la suite de cela, on devait versionner le flux nifi sur github, pour se faire on a créer le repo et récupérer le token. 
 Dans le terminal, nous avons effectué la commande : git clone https://github.com/lucas8585/Pipeline_ECE.git
 
 Lorsque le repo a été cloné nous avons accédé aux fichiers providers.xml de nifi registry et ajouter le token et les données suivantes : 
 
 ![provider](https://user-images.githubusercontent.com/94440244/146554725-3f93a24a-07b9-4f3a-b7fe-f69f453f19b6.png)
 
-Le repo github à présent versionné a Nifi on devait créer un flux. Nous avons donc établis cette template ci-dessous : 
+Le repo github à présent versionné à Nifi on devait créer un flux. Nous avons donc établis cette template ci-dessous : 
 
 ![template](https://user-images.githubusercontent.com/94440244/146555337-15b4e902-4ad7-44db-b960-8e45bc008cf5.png)
 ![config1](https://user-images.githubusercontent.com/94440244/146555938-f5a73c42-a5ba-419c-869f-f5c55080d184.png)
@@ -36,7 +41,9 @@ Cependant nous avons constaté que le fichier csv était trop lourd et ne pouvai
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
 Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée.
+
 Comment évaluer la pertinence des données ? 
+
 En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a enlevé les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. 
 On a également enlever les données Null ainsi que les redondances. 
 
