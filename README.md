@@ -60,10 +60,10 @@ Selon nous, si le fichier était trop lourd on devait donc faire en sorte de le 
 
 Comment évaluer la pertinence des données ? 
 
-En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a enlevé les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. 
-On a également enlever les données Null ainsi que les redondances. 
+En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a enlevé les colonnes qui ne nous semblait pas pertinentes, car il y avait beaucoup de texte. 
+On a également retiré les données Null ainsi que les redondances. 
 
-Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer airflow avec la commande suivante : airflow standalone
+Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancé airflow avec la commande suivante : airflow standalone
 
 <img width="1263" alt="airflow" src="https://user-images.githubusercontent.com/94440244/146565217-531ed911-17f0-45a0-a1bc-431a97361e9b.png">
 
