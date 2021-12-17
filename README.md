@@ -8,4 +8,8 @@ bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replicat
 ![Topic](https://user-images.githubusercontent.com/94440244/146551412-c9d8c29f-ebae-48db-8fa3-a91e04b28e16.png)
 
 Apres avoir créer ce topic nous devions faire le lien entre nifi et nifi registry pour pouvoir versionner le flux vers ce repo github par la suite. 
-Pour cela on a lancer nifi et nifi registry avec les commandes suivantes : 
+Pour cela on a lancés nifi et nifi registry avec les commandes suivantes : 
+
+![nifi connect](https://user-images.githubusercontent.com/94440244/146552529-c62eef8e-4022-46fc-b617-37360ea78af3.png)
+
+Après avoir démarré nifi et nifi registry on devait créer un bucket avec nifi registry et connecter nifi dans le bucket créé.
