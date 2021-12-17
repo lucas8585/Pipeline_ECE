@@ -28,5 +28,6 @@ Le repo github à présent versionné a Nifi on devait créer un flux. Nous avon
 
 ![template](https://user-images.githubusercontent.com/94440244/146555337-15b4e902-4ad7-44db-b960-8e45bc008cf5.png)
 ![config1](https://user-images.githubusercontent.com/94440244/146555938-f5a73c42-a5ba-419c-869f-f5c55080d184.png)
+![config2](https://user-images.githubusercontent.com/94440244/146556112-a54deb30-a033-4430-840d-0c409df783fc.png)
 
 Cependant nous avons constater que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka
