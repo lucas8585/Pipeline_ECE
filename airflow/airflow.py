@@ -28,7 +28,7 @@ default_args = {
 
 }
 
- 
+ #Cette fonction python qu'on a créer demande de lire un fichier csv et de le traduire en .parquet
 
 def myFunction():
 
@@ -53,6 +53,9 @@ with DAG(
  # Le dag est créé, on va ensuite lui attribuer des tâches, ici en l'ocurrence on a décider de faire un ETL (Extract, Transform, Load)
   # en tâche 1 on va récuperer la donnée précédemment traitée avec pyspark 
   # en tâche 2 on va transformer cette donnée en .parquet afin de la charger par la suite 
+  
+  
+ # Dans le task_1 on demande à l'opérateur de récuperer le fichier csv
 
     task_1 = BashOperator(
 
@@ -62,7 +65,8 @@ with DAG(
 
     )
 
- 
+ # PythonOperator est un operateur qui permet d'executer des fonctions python. Dans ce task_2 on lui demande 
+ # d'executer la fonction myFunction qu'on a défini juste avant
 
     task_2 = PythonOperator(
 
