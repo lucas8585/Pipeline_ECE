@@ -23,3 +23,6 @@ Vérifier si spark fonctionne avec la commande suivante pour lancer spark-shell
 Vérifier si spark fonctionne avec la commande suivante pour lancer pyspark
 
 ./spark/bin/pyspark 
+
+
+![pyspark](https://user-images.githubusercontent.com/94440244/146572115-535829fb-a6c3-4072-9557-645f436e7da9.png)
