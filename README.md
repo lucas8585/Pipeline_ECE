@@ -22,3 +22,5 @@ Dans le terminal, nous avons effectué la commande : git clone https://github.co
 
 Lorsque le repo a été cloner nous avons accédé aux fichiers providers.xml de nifi registry et ajouter le token et les données suivantes : 
 
+![provider](https://user-images.githubusercontent.com/94440244/146554725-3f93a24a-07b9-4f3a-b7fe-f69f453f19b6.png)
+
