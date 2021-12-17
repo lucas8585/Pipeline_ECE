@@ -38,7 +38,8 @@ Cependant nous avons constaté que le fichier csv était trop lourd et ne pouvai
 Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée. On a enlevé les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... 
 On a également enlever les données Null ainsi que les redondances. 
 
-Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer airflow avec la commande suivante : 
+Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer airflow avec la commande suivante : airflow standalone
+
 dans le but de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
 En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
 
