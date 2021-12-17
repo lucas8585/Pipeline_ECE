@@ -1,13 +1,13 @@
 Le but de ce projet est avant tout de récupérer et préparer les données disponible pour un cabinet de conseil en stratégie politique.
  Nous sommes donc passé par plusieurs étapes : 
  La premiere était de récupérer un jeu de donnée, nous avons donc choisit les élections régionales de 2010 en fichier csv, car le csv est très utilisé et facilement maniable.
- Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu créer un topic Kafka avec la commande suivante : 
+ Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu crée un topic Kafka avec la commande suivante : 
  
 bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replication-factor 1 bootstrap-server localhost:9092
  
 ![Topic](https://user-images.githubusercontent.com/94440244/146551412-c9d8c29f-ebae-48db-8fa3-a91e04b28e16.png)
 
-Apres avoir créer ce topic, nous devions faire le lien entre nifi et nifi registry afin de versionner le flux vers un repo github par la suite. 
+Apres avoir crée ce topic, nous devions faire le lien entre nifi et nifi registry afin de versionner le flux vers un repo github par la suite. 
 Pour cela, on a lancé nifi et nifi registry avec les commandes suivantes : 
 
 ![nifi connect](https://user-images.githubusercontent.com/94440244/146552529-c62eef8e-4022-46fc-b617-37360ea78af3.png)
@@ -22,10 +22,10 @@ Après avoir démarré nifi et nifi registry on devait créer un bucket avec nif
 
 ![registryclient](https://user-images.githubusercontent.com/94440244/146553167-2d66f29a-77ec-4272-ac62-463b2bf445f1.png)
 
-A la suite de cela, on devait versionner le flux nifi sur github, pour se faire on a créer le repo et récupérer le token. 
+A la suite de cela, on devait versionner le flux nifi sur github, pour se faire on a crée le repo et récupéré le token. 
 Dans le terminal, nous avons effectué la commande : git clone https://github.com/lucas8585/Pipeline_ECE.git
 
-Lorsque le repo a été cloné nous avons accédé aux fichiers providers.xml de nifi registry et ajouter le token et les données suivantes : 
+Lorsque le repo a été cloné nous avons accédé aux fichiers providers.xml de nifi registry et ajouté le token et les données suivantes : 
 
 ![provider](https://user-images.githubusercontent.com/94440244/146554725-3f93a24a-07b9-4f3a-b7fe-f69f453f19b6.png)
 
@@ -36,7 +36,7 @@ Le repo github à présent versionné à Nifi on devait créer un flux. Nous avo
 ![config2](https://user-images.githubusercontent.com/94440244/146556112-a54deb30-a033-4430-840d-0c409df783fc.png)
 ![config3](https://user-images.githubusercontent.com/94440244/146555943-7c0c8cc5-fccb-4076-ac2d-5e8628223a92.png)
 
-Cependant nous avons constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. 
+Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. 
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
