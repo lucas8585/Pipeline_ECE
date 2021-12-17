@@ -1,4 +1,4 @@
-Le but de ce projet est d'avant tout de récupérer et préparer les données disponible. 
+Le but de ce projet est avant tout de récupérer et préparer les données disponible pour un cabinet de conseil en stratégie politique.
  Nous sommes donc passé par plusieurs étapes : 
  La premiere était de récupérer un jeu de donnée, nous avons donc choisit les élections régionales de 2010 en fichier csv, car le csv est très utilisé et facilement maniable.
  Une fois ce jeu de donnée récupérer nous avons décider de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu créer un topic Kafka avec la commande suivante : 
@@ -35,7 +35,9 @@ Cependant nous avons constaté que le fichier csv était trop lourd et ne pouvai
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
-Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée. On a enlevé les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... 
+Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée.
+Comment évaluer la pertinence des données ? 
+En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a enlevé les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. 
 On a également enlever les données Null ainsi que les redondances. 
 
 Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer airflow avec la commande suivante : airflow standalone
