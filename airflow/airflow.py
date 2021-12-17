@@ -82,4 +82,4 @@ with DAG(
 
 task_1.set_downstream(task_2)
 
-#Malheureusement, nous avons eu un problème avec airflow qui n'a pas afficher notre dag, on ne pouvait donc pas obtenir notre fichier résultat en .parquet
+#Malheureusement, nous avons eu un problème avec airflow qui n'a pas affiché notre dag, même après vérification du chemin qui était bel et bien dans le dossier /Users/mugeozdin/Downloads/ece-airflow/dags. Nous n'avons donc pas pu obtenir notre fichier résultat en .parquet
