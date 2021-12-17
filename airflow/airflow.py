@@ -77,7 +77,7 @@ with DAG(
     )
 
  
-# le .set_downstream nous permet ici de donner l'orde à laquel les tâches vont fonctionner. Par exemple, ici la task_1 va s'executer 
+# le .set_downstream nous permet ici de donner l'ordre à laquel les tâches vont fonctionner. Par exemple, ici la task_1 va s'executer 
 # et quand elle aura fini, cela lancera l'éxecution de la task_2. On peut aussi remplacer le .set_downstream par >>
 
 task_1.set_downstream(task_2)
