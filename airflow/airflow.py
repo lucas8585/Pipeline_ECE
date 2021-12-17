@@ -50,9 +50,9 @@ with DAG(
 
 ) as dag:
 
- # Ici on a crée le dag et on va ensuite lui attribuer des tâches, ici en l'ocurrence on a décider de faire un ETL (Extract, Transform, Load)
-  # en tâche 1 on va récuperer la donnée précédemment traiter avec pyspark 
-  # en tâche 2 on va transformer cette donnée en parquet afin de la charger par la suite 
+ # Le dag est créé, on va ensuite lui attribuer des tâches, ici en l'ocurrence on a décider de faire un ETL (Extract, Transform, Load)
+  # en tâche 1 on va récuperer la donnée précédemment traitée avec pyspark 
+  # en tâche 2 on va transformer cette donnée en .parquet afin de la charger par la suite 
 
     task_1 = BashOperator(
 
@@ -73,8 +73,9 @@ with DAG(
     )
 
  
-# le .set_downstream nous permet ici de donner l'orde à laquel les tâches vont fonctionner. Par exemple ici la task_1 va s'executer 
-# et quand elle aura fini cela lancera l'éxecution de la task_2 on peut aussi remplacer le .set_downstream par >>
+# le .set_downstream nous permet ici de donner l'orde à laquel les tâches vont fonctionner. Par exemple, ici la task_1 va s'executer 
+# et quand elle aura fini, cela lancera l'éxecution de la task_2. On peut aussi remplacer le .set_downstream par >>
+
 task_1.set_downstream(task_2)
 
-#Malheureusement, on a eu un soucis avec airflow qui n'a pas afficher notre dag, on ne pouvait donc pas obtenir notre fichier résultat en .parquet
+#Malheureusement, nous avons eu un problème avec airflow qui n'a pas afficher notre dag, on ne pouvait donc pas obtenir notre fichier résultat en .parquet
