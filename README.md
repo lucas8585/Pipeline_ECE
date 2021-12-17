@@ -27,5 +27,6 @@ Lorsque le repo a été cloné nous avons accédé aux fichiers providers.xml de
 Le repo github à présent versionné a Nifi on devait créer un flux. Nous avons donc établis cette template ci-dessous : 
 
 ![template](https://user-images.githubusercontent.com/94440244/146555337-15b4e902-4ad7-44db-b960-8e45bc008cf5.png)
+![config1](https://user-images.githubusercontent.com/94440244/146555938-f5a73c42-a5ba-419c-869f-f5c55080d184.png)
 
 Cependant nous avons constater que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka
