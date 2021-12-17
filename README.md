@@ -1,7 +1,19 @@
 Le but de ce projet est avant tout de récupérer et préparer les données disponible pour un cabinet de conseil en stratégie politique.
  Nous sommes donc passé par plusieurs étapes : 
  La premiere était de récupérer un jeu de donnée, nous avons donc choisit les élections régionales de 2010 en fichier csv, car le csv est très utilisé et facilement maniable.
- Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu crée un topic Kafka avec la commande suivante : 
+ Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu telechargé kafka https://www.apache.org/dyn/closer.cgi?path=/kafka/3.0.0/kafka_2.13-3.0.0.tgz avec ce lien. 
+ 
+Puis on l'a installé avec les commandes suivantes : 
+
+tar -xzf kafka_2.13-3.0.0.tgz
+
+cd kafka_2.13-3.0.0.tgz
+
+On a ensuite lancer zookeeper : 
+
+
+
+crée un topic Kafka avec la commande suivante : 
  
 bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replication-factor 1 bootstrap-server localhost:9092
  
