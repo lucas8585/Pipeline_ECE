@@ -11,6 +11,10 @@ cd kafka_2.13-3.0.0.tgz
 
 On a ensuite lancer zookeeper : 
 
+![zookeeper](https://user-images.githubusercontent.com/94440244/146580037-d62da2af-8847-4e37-9b5e-bfbc99b08182.png)
+
+Puis kafka :
+
 
 
 crée un topic Kafka avec la commande suivante : 
