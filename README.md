@@ -40,6 +40,11 @@ On a également enlever les données Null ainsi que les redondances.
 
 Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer airflow avec la commande suivante : airflow standalone
 
+<img width="1263" alt="airflow" src="https://user-images.githubusercontent.com/94440244/146565217-531ed911-17f0-45a0-a1bc-431a97361e9b.png">
+
+Lorsque le mot de passe a été générer on a pu se connecter avec Airflow
+
+
 dans le but de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
 En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
 
