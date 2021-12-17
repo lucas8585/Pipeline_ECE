@@ -37,5 +37,5 @@ df3.show()
 
 
 
-df3.write.csv('/home/')
+df3.write.csv('/Users/mugeozdin/Desktop/projet')
 
