@@ -6,3 +6,6 @@ Le but de ce projet est d'avant tout de récupérer et préparer les données di
 bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replication-factor 1 bootstrap-server localhost:9092
  
 ![Topic](https://user-images.githubusercontent.com/94440244/146551412-c9d8c29f-ebae-48db-8fa3-a91e04b28e16.png)
+
+Apres avoir créer ce topic nous devions faire le lien entre nifi et nifi registry pour pouvoir versionner le flux vers ce repo github par la suite. 
+Pour cela on a lancer nifi et nifi registry avec les commandes suivantes : 
