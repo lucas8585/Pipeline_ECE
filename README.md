@@ -15,9 +15,9 @@ On a ensuite lancer zookeeper :
 
 Puis kafka :
 
+![kafka](https://user-images.githubusercontent.com/94440244/146580068-c9bb63ba-c424-4afb-abe0-df53530da94f.png)
 
-
-crée un topic Kafka avec la commande suivante : 
+A la suite de cela nous avons crée un topic Kafka avec la commande suivante : 
  
 bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replication-factor 1 bootstrap-server localhost:9092
  
