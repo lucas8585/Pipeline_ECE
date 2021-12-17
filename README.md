@@ -44,8 +44,9 @@ Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer air
 
 Lorsque le mot de passe a été générer on a pu se connecter avec Airflow
 
+<img width="1266" alt="localhost" src="https://user-images.githubusercontent.com/94440244/146565205-09150d89-13f6-4633-855f-9786efb17c47.png">
 
-dans le but de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
+L'objectif étant de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
 En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
 
 Les données ont été rendues significatives, elles sont donc prêtes à être exploitées. 
