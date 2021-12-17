@@ -23,7 +23,7 @@ bin/kafka-topics.sh --create --topic Elections --create --partition 3 --replicat
  
 ![Topic](https://user-images.githubusercontent.com/94440244/146551412-c9d8c29f-ebae-48db-8fa3-a91e04b28e16.png)
 
-Apres avoir crée ce topic, nous devions faire le lien entre nifi et nifi registry afin de versionner le flux vers un repo github par la suite. 
+Apres avoir créé ce topic, nous devions faire le lien entre nifi et nifi registry afin de versionner le flux vers un repo github par la suite. 
 Pour cela, on a lancé nifi et nifi registry avec les commandes ci-contre : 
 
 ![nifi connect](https://user-images.githubusercontent.com/94440244/146552529-c62eef8e-4022-46fc-b617-37360ea78af3.png)
@@ -52,7 +52,7 @@ Le repo github à présent versionné à Nifi on devait créer un flux. Nous avo
 ![config2](https://user-images.githubusercontent.com/94440244/146556112-a54deb30-a033-4430-840d-0c409df783fc.png)
 ![config3](https://user-images.githubusercontent.com/94440244/146555943-7c0c8cc5-fccb-4076-ac2d-5e8628223a92.png)
 
-Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. (même en changeant la capacité maximum, la max request size etait a 1MB de base) 
+Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. (même en changeant la capacité maximum, la max request size était a 1MB de base) 
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
@@ -62,7 +62,7 @@ Selon nous, si le fichier était trop lourd on devait donc faire en sorte de le 
 
 Comment évaluer la pertinence des données ? 
 
-En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a enlevé les colonnes qui ne nous semblait pas pertinentes, car il y avait beaucoup de texte. 
+En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... On a donc enlevé les colonnes qui ne nous semblait pas pertinentes, car il y avait beaucoup de texte. 
 On a également retiré les données Null ainsi que les redondances. 
 
 Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancé airflow avec la commande suivante : airflow standalone
@@ -74,6 +74,6 @@ Lorsque le mot de passe a été généré on a pu se connecter avec Airflow
 <img width="1266" alt="localhost" src="https://user-images.githubusercontent.com/94440244/146565205-09150d89-13f6-4633-855f-9786efb17c47.png">
 
 L'objectif étant de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
-En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
+En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politiques. Il faut donc permettre une évolution du shéma. 
 
 Une fois que les données ont été rendues significatives, elles sont donc prêtes à être exploitées. 
