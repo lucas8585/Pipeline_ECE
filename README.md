@@ -1,7 +1,7 @@
 Le but de ce projet est avant tout de récupérer et préparer les données disponible pour un cabinet de conseil en stratégie politique.
  Nous sommes donc passé par plusieurs étapes : 
  La premiere était de récupérer un jeu de donnée, nous avons donc choisit les élections régionales de 2010 en fichier csv, car le csv est très utilisé et facilement maniable.
- Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu telechargé kafka https://www.apache.org/dyn/closer.cgi?path=/kafka/3.0.0/kafka_2.13-3.0.0.tgz avec ce lien. 
+ Une fois la donnée collectée nous avons décidé de le faire passer avec un flux Nifi et le lire dans un topic Kafka. On a donc en premier lieu téléchargé kafka https://www.apache.org/dyn/closer.cgi?path=/kafka/3.0.0/kafka_2.13-3.0.0.tgz avec ce lien. 
  
 Puis on l'a installé avec les commandes suivantes : 
 
@@ -56,7 +56,7 @@ Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
-Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée.
+Selon nous, si le fichier était trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée.
 
 Comment évaluer la pertinence des données ? 
 
@@ -67,11 +67,11 @@ Une fois le fichier traité nous devions l'orchestrer, pour cela on a lancer air
 
 <img width="1263" alt="airflow" src="https://user-images.githubusercontent.com/94440244/146565217-531ed911-17f0-45a0-a1bc-431a97361e9b.png">
 
-Lorsque le mot de passe a été générer on a pu se connecter avec Airflow
+Lorsque le mot de passe a été généré on a pu se connecter avec Airflow
 
 <img width="1266" alt="localhost" src="https://user-images.githubusercontent.com/94440244/146565205-09150d89-13f6-4633-855f-9786efb17c47.png">
 
 L'objectif étant de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
 En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
 
-Les données ont été rendues significatives, elles sont donc prêtes à être exploitées. 
+Une fois que les données ont été rendues significatives, elles sont donc prêtes à être exploitées. 
