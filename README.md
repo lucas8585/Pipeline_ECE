@@ -52,7 +52,7 @@ Le repo github à présent versionné à Nifi on devait créer un flux. Nous avo
 ![config2](https://user-images.githubusercontent.com/94440244/146556112-a54deb30-a033-4430-840d-0c409df783fc.png)
 ![config3](https://user-images.githubusercontent.com/94440244/146555943-7c0c8cc5-fccb-4076-ac2d-5e8628223a92.png)
 
-Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. (même en changeant la capacité maximum) 
+Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. (même en changeant la capacité maximum, la max request size etait a 1MB de base) 
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
