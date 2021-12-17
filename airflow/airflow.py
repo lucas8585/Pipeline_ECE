@@ -28,7 +28,7 @@ default_args = {
 
 }
 
- #Cette fonction python qu'on a créer demande de lire un fichier csv et de le traduire en .parquet
+ #Cette fonction python qu'on a créé demande de lire un fichier csv et de le traduire en .parquet
 
 def myFunction():
 
