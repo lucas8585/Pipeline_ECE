@@ -15,3 +15,4 @@ Pour cela on a lancés nifi et nifi registry avec les commandes suivantes :
 Après avoir démarré nifi et nifi registry on devait créer un bucket avec nifi registry et connecter nifi dans le bucket créé grâce au registryclient ainsi que le port nifi registry (ici en l'occurence on est sur le port par défaut de nifi registry localhost:18080).
 
 ![bucket](https://user-images.githubusercontent.com/94440244/146553199-5dac1549-056c-4d71-81e3-1567bee64925.png)
+![registryclient](https://user-images.githubusercontent.com/94440244/146553167-2d66f29a-77ec-4272-ac62-463b2bf445f1.png)
