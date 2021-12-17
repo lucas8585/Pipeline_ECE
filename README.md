@@ -20,7 +20,10 @@ Après avoir démarré nifi et nifi registry on devait créer un bucket avec nif
 A la suite de cela, on devait versionner le flux nifi sur github, pour se faire on a créer le repo et recuperer le token. 
 Dans le terminal, nous avons effectué la commande : git clone https://github.com/lucas8585/Pipeline_ECE.git
 
-Lorsque le repo a été cloner nous avons accédé aux fichiers providers.xml de nifi registry et ajouter le token et les données suivantes : 
+Lorsque le repo a été cloné nous avons accédé aux fichiers providers.xml de nifi registry et ajouter le token et les données suivantes : 
 
 ![provider](https://user-images.githubusercontent.com/94440244/146554725-3f93a24a-07b9-4f3a-b7fe-f69f453f19b6.png)
+
+Le repo github à présent lié a Nifi on devait créer un flux. Nous avons donc établis cette template ci-dessous : 
+
 
