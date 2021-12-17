@@ -56,6 +56,8 @@ Cependant on a constaté que le fichier csv était trop lourd et ne pouvait donc
 
 ![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
+![taille](https://user-images.githubusercontent.com/94440244/146583700-1fde1c5f-9a6e-4a19-92ee-0a0a0f2cfc69.png)
+
 Selon nous, si le fichier était trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utilisé pyspark afin de traiter la donnée.
 
 Comment évaluer la pertinence des données ? 
