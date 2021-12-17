@@ -13,3 +13,5 @@ Pour cela on a lancés nifi et nifi registry avec les commandes suivantes :
 ![nifi connect](https://user-images.githubusercontent.com/94440244/146552529-c62eef8e-4022-46fc-b617-37360ea78af3.png)
 
 Après avoir démarré nifi et nifi registry on devait créer un bucket avec nifi registry et connecter nifi dans le bucket créé.
+
+![bucket](https://user-images.githubusercontent.com/94440244/146553199-5dac1549-056c-4d71-81e3-1567bee64925.png)
