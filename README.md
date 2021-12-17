@@ -33,4 +33,9 @@ Le repo github à présent versionné a Nifi on devait créer un flux. Nous avon
 
 Cependant nous avons constaté que le fichier csv était trop lourd et ne pouvait donc pas être traiter dans le topic kafka. 
 
+![error](https://user-images.githubusercontent.com/94440244/146556387-1456db68-286e-4402-9d02-c67495c97a98.png)
 
+Selon nous, si le fichier etait trop lourd on devait donc faire en sorte de le réduire au maximum. Pour cela nous avons utiliser pyspark afin de traiter la donnée. On a enlever les colonnes qui ne nous semblait pas pertinente, car il y avait beaucoup de texte. En l'occurence un cabinet de conseil en stratégie politique à besoin surtout des chiffres clés ; des résultats de vote, le pourcentage d'absentéisme... 
+On a également enlever les données Null ainsi que les redondances. 
+
+Une fois le fichier traité nous devions l'orchestrer avec Airflows dans le but de transformer le csv en parquet afin de facilité davantage le traitement. Car le parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du parquet c'est aussi de réduire le temps de lecture mais surtout elle permet une capacité d'évolution 
