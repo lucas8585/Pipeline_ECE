@@ -40,3 +40,5 @@ On a également enlever les données Null ainsi que les redondances.
 
 Une fois le fichier traité nous devions l'orchestrer avec Airflows dans le but de transformer le csv en .parquet afin de faciliter davantage le traitement. Car le .parquet permet le stockage de fichier volumineux mais pas seulement. L'avantage du .parquet c'est aussi de réduire le temps de lecture, mais surtout elle permet une capacité d'évolution ce qui n'est clairement pas négligeable pour le client. 
 En effet, il arrive fréquemment qu'une source de donnée soit changeante, en particulier les données politique. Il faut donc permettre une évolution du shéma. 
+
+Une fois la donnée traité en .parquet, elle est prête à être utilisée. 
